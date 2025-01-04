@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './pages/Home';
-
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -15,6 +15,7 @@ function App() {
   }
   return (
     <div>
+       <Analytics />
       <Home />
     </div>
   );
